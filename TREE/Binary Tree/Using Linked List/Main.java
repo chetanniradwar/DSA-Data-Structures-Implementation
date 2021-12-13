@@ -16,7 +16,8 @@ System.out.println();
 bt.postorderTraversal(root);
 System.out.println();
 
-
+bt.levelorderTraversal(root);
+System.out.println();
 }
 
 

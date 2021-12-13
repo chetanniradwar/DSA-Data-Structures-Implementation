@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 public class BinaryTree {
 
     Node root;
@@ -70,4 +72,28 @@ public void preorderTraversal(Node node)
             System.out.print(node.value + " -> ");
         }
     }
+
+    // Level Order Traversal
+public void levelorderTraversal(Node node)
+{
+        Queue <Node> q = new LinkedList<Node> () ;
+        if(root == null)
+        System.out.println("Tree does not have any elements");
+        else
+        q.add(root);
+        
+        while(!q.isEmpty())
+        {
+            Node tmp = q.remove();
+            System.out.print(tmp.value +" -> ");
+            if(tmp.left!=null)
+            q.add(tmp.left);
+            if(tmp.right!=null)
+            q.add(tmp.right);
+        }
+}
+{
+
+}
+
 }
