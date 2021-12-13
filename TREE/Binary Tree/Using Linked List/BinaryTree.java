@@ -92,8 +92,62 @@ public void levelorderTraversal(Node node)
             q.add(tmp.right);
         }
 }
-{
 
+// searching an element in tree
+public boolean search(Node node ,String target)
+        {
+            Queue <Node> q = new LinkedList<Node> () ;
+        if(root == null)
+        System.out.println("Tree does not have any elements");
+        else
+        q.add(root);
+        
+        while(!q.isEmpty())
+        {
+            Node tmp = q.remove();
+            if(tmp.value.equals(target))
+            return true ;
+            if(tmp.left!=null)
+            q.add(tmp.left);
+            if(tmp.right!=null)
+            q.add(tmp.right);
+        }
+        return false ;
+        }
+
+// inserting an element in an string
+public void insert(Node node , String value)
+{
+   Node newnode = new Node(value);
+   
+   Queue <Node> q = new LinkedList<Node> () ;
+   if(root == null)
+   {
+       root = newnode ;
+   }
+   else{
+   q.add(root);
+   
+   while(!q.isEmpty())
+   {
+       Node tmp = q.remove();
+    //    System.out.print(tmp.value +" -> ");
+       if(tmp.left==null)
+       {
+           tmp.left = newnode ;
+           return;
+       }
+       else
+       q.add(tmp.left);
+       if(tmp.right==null)
+       {
+           tmp.right = newnode;
+           return ;
+       }
+       else
+       q.add(tmp.right);
+   }
 }
 
+}
 }
