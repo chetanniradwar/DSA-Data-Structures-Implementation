@@ -35,8 +35,9 @@ public void inorderTraversal(Node node)
     if(node == null)
     return ;
     else{
-        System.out.print(node.value+" -> ");
+        
         inorderTraversal(node.left);
+        System.out.print(node.value+" -> ");
         inorderTraversal(node.right);
         }
         
@@ -51,8 +52,8 @@ public void preorderTraversal(Node node)
     return ;
     else
     {
-        preorderTraversal(node.left);
         System.out.print(node.value+" -> ");
+        preorderTraversal(node.left);
         preorderTraversal(node.right);
     }
 }
