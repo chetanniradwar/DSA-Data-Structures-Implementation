@@ -18,14 +18,14 @@ Node root = bt.createBinaryTree();
 // // level Order Traversals
 // bt.levelorderTraversal(root);
 // System.out.println();
-// // search an element in an tree
-// System.out.println(bt.search(root , "N8") );
-bt.inorderTraversal(root);
-System.out.println();
-bt.insert(root, "N8");
-bt.insert(root, "N9");
-bt.insert(root, "N10");
-bt.levelorderTraversal(root);
+// search an element in an tree
+System.out.println(bt.search(root , "N8") );
+// bt.inorderTraversal(root);
+// System.out.println();
+// bt.insert(root, "N8");
+// bt.insert(root, "N9");
+// bt.insert(root, "N10");
+// bt.levelorderTraversal(root);
 
 }
 
