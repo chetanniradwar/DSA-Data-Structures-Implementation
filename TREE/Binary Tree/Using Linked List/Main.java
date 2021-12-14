@@ -27,11 +27,18 @@ Node root = bt.createBinaryTree();
 // bt.insert(root, "N10");
 // bt.levelorderTraversal(root);
 
-bt.levelorderTraversal(root);
-System.out.println();
-Node modifiedroot  = bt.deletionBT(root, "N3");
-bt.levelorderTraversal(modifiedroot);
 
+// deletion of a node
+// bt.levelorderTraversal(root);
+// System.out.println();
+// Node modifiedroot  = bt.deletionBT(root, "N3");
+// bt.levelorderTraversal(modifiedroot);
+
+// deletion of entire tree
+bt.levelorderTraversal(root);
+System.out.println() ;
+bt.deleteTree(root) ;
+bt.levelorderTraversal(root);
 
 }
 

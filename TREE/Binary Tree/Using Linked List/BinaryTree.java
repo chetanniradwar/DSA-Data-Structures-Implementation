@@ -274,6 +274,14 @@ else
         
        return root ;
     }
-}
 
+
+// delete entire tree
+
+public void deleteTree(Node root)
+{
+this.root =null ;
+System.out.println("The tree has been deleted");
+}
+}
 
