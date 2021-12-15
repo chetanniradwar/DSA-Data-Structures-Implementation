@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Graph {
     ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
@@ -22,6 +24,26 @@ public class Graph {
             }
             System.out.println();
         }
+    }
+
+    public void BFS()
+    {
+            Queue <GraphNode> q = new LinkedList<GraphNode>();
+            q.add(nodeList.get(0)) ;
+            while(!q.isEmpty())
+            {
+               GraphNode node = q.remove();
+               node.isvisited = true;
+               System.out.print(node.name +" ");
+               for(GraphNode x : node.neighbour)
+               {
+                   if(x.isvisited == false && !q.contains(x))
+                   {
+                        q.add(x);
+                   }
+               }
+
+            }
     }
 
 }
