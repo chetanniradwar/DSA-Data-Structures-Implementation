@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 
 
@@ -39,4 +41,38 @@ public class Graph {
             System.out.println();
         }
     }
-}
+        public ArrayList<GraphNode> getNeighbours(GraphNode node)
+        {        int i =node.index;
+                ArrayList <GraphNode> neighbour = new ArrayList<GraphNode>();
+                    for(int j = 0 ; j <nodeList.size();j++)
+                    {
+                        if(adjacencyMatrix[i][j]==1)
+                        {
+                               neighbour.add(nodeList.get(j)); 
+                        }
+                    }
+                    return neighbour ;
+        }
+    
+        public void BFS()
+        {
+                Queue <GraphNode> q = new LinkedList<GraphNode>();
+                q.add(nodeList.get(0)) ;
+                while(!q.isEmpty())
+                {
+                   GraphNode node = q.remove();
+                   node.isvisited = true;
+                   System.out.print(node.name +" ");
+                   for(GraphNode x : getNeighbours(node))
+                   {
+                       if(x.isvisited == false && !q.contains(x))
+                       {
+                            q.add(x);
+                       }
+                   }
+    
+                }
+        }
+    }
+
+
