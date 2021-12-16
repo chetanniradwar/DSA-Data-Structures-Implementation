@@ -85,16 +85,22 @@ public class Graph {
         public void DFS()
     {
         Stack<GraphNode> s = new Stack<GraphNode>();
-        s.push(nodeList.get(0));
+       GraphNode firstNode= nodeList.get(0);
+        s.push(firstNode);
+        firstNode.isvisited = true;
         while(!s.empty())
         {
             GraphNode node = s.pop();
-            node.isvisited = true ;
+            // node.isvisited = true ;
             System.out.print(node.name+"  ") ;
             for(GraphNode x : getNeighbours(node))
             {
-                    if(!x.isvisited && !s.contains(x))
-                    s.push(x);
+                    if(!x.isvisited )
+                    {
+                        s.push(x);
+                        x.isvisited = true;
+                    }
+                   
             }
         }
     }
