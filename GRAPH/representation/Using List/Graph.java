@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class Graph {
     ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
@@ -44,6 +45,30 @@ public class Graph {
                }
 
             }
+    }
+    public void DFS()
+    {
+        Stack<GraphNode> s = new Stack<GraphNode>();
+        s.push(nodeList.get(0));
+        while(!s.empty())
+        {
+            GraphNode node = s.pop();
+            node.isvisited = true ;
+            System.out.print(node.name+"  ") ;
+            for(GraphNode x : node.neighbour)
+            {
+                    if(!x.isvisited && !s.contains(x))
+                    s.push(x);
+            }
+        }
+    }
+
+    public void makeunvisited()
+    {
+        for(GraphNode x : nodeList)
+        {
+                x.isvisited = false;
+        }
     }
 
 }

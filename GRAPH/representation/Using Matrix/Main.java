@@ -11,7 +11,9 @@ nodeList.add(new GraphNode("C", 2));
 nodeList.add(new GraphNode("D", 3));
 nodeList.add(new GraphNode("E", 4));
 nodeList.add(new GraphNode("F", 5));
+
 Graph g = new Graph(nodeList);
+
 g.addUndirectedEdge(0,1);
 g.addUndirectedEdge(0,3);
 g.addUndirectedEdge(1,2);
