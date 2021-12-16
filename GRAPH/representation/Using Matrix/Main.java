@@ -29,5 +29,12 @@ g.printMatrix();
 System.out.println() ;
 g.BFS();
 System.out.println() ;
+
+
+
+g.makeunvisited();
+System.out.println() ;
+g.DFS();
+System.out.println() ;
     }
 }
