@@ -40,4 +40,35 @@ public void display()
     }
 }
 
+public void insert(String data ,int index)
+{
+    Node node = new Node(data);
+    if(index>size)
+    {
+        System.out.println("Index out of Bound");
+        return;
+    }
+    if(index ==0)
+        {
+            node.next=head;
+            head=node;
+        }
+        else if (index==size)
+        {
+            tail.next=node;
+            tail = node;
+        }
+        else
+        {   Node temp=head;
+            for(int i = 1 ; i<index ; i++)
+            {
+                temp = temp.next;
+            }
+            node.next=temp.next;
+            temp.next = node;
+
+        }
+        size++;
+}
+
 }

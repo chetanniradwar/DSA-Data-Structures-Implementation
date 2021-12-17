@@ -9,6 +9,11 @@ public class Main {
         l.add("G");
         l.add("H");
         l.display();
+        l.insert("A", 0);
+        l.insert("X", 3);
+        l.insert("Z", 9);
+        l.insert("I", 22);
+        l.display();
         
     }
 }
