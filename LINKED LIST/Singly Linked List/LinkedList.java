@@ -59,7 +59,8 @@ public void insert(String data ,int index)
             tail = node;
         }
         else
-        {   Node temp=head;
+        {   
+            Node temp=head;
             for(int i = 1 ; i<index ; i++)
             {
                 temp = temp.next;
@@ -69,6 +70,26 @@ public void insert(String data ,int index)
 
         }
         size++;
+}
+
+public int search(String data)
+{  Node node =head ;
+    int index=0;
+    while(node!=null)
+
+    {
+       if(node.data.equals(data))
+       {
+           return index;
+
+       }
+       else{
+
+        index++;
+        node= node.next;
+       }
+    }
+    return 0;
 }
 
 }
