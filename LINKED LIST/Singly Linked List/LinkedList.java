@@ -1,6 +1,7 @@
 public class LinkedList {
     Node head ;
     Node tail ;
+    int size =0 ;
 public LinkedList()
 {
    
@@ -22,7 +23,7 @@ public void add(String data)
         tail.next = node ;
         tail = node;
     }
-  
+    size++;
 
 }
 
@@ -32,7 +33,7 @@ public void display()
     {
         System.out.println("Linked List is Empty") ;
     }
-    while(node.next!= null)
+    while(node!= null)
     {
         System.out.print(node.data +" -> ");
         node = node.next;
