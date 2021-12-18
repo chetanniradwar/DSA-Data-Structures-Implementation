@@ -28,7 +28,8 @@ public void add(String data)
 }
 
 public void display()
-{   Node node = head ;
+{   
+    Node node = head ;
     if(head==null)
     {
         System.out.println("Linked List is Empty") ;
@@ -89,7 +90,42 @@ public int search(String data)
         node= node.next;
        }
     }
-    return 0;
+    return -1;
+}
+
+public void delete( int index)
+{   if(index>=size)
+    {
+        System.out.println("Node does not exist");
+    }
+    if(index== 0)
+    {
+        head = head.next;
+    }
+    else if(index == size -1)
+    {
+        Node temp =head;
+        while(temp.next.next!=null)
+        {
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = temp;
+    }
+    else{
+        Node prev=null ;
+        Node tar = head;;
+        for(int i =0; i<index;i++)
+        {
+            prev =tar;
+            tar= tar.next;
+        }
+        prev.next = tar.next;
+    }
+    size--;
+}
+{
+
 }
 
 }
