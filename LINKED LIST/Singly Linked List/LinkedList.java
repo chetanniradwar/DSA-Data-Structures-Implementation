@@ -123,6 +123,11 @@ public void delete( int index)
         prev.next = tar.next;
     }
     size--;
+    if(size==0)
+    {
+        tail=null;
+        head=null;
+    }
 }
 public void delete(String data)
 {
