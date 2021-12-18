@@ -54,6 +54,18 @@ LinkedList<String> hashTable[];
                 return -1;
             }
    }
+
+   public void display()
+   {    if(hashTable == null)
+    {
+        System.out.println("HashTable does not exist") ;
+        return;
+    }
+       for(int i = 0 ; i< hashTable.length; i++)
+       {
+           System.out.println(i +" -> " + hashTable[i]);
+       }
+   }
    
   
 }

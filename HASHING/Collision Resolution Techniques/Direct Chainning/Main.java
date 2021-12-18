@@ -7,5 +7,6 @@ public class Main {
        dc.insert("niradwar");
        dc.insert("atnhce");
        System.out.println(dc.search("atnhce"));
+       dc.display();
     }
 }
