@@ -129,12 +129,23 @@ public void delete(String data)
     Node node = head;
     // Node prev= null;
     int index=0;
-    while(node.data.equals(data))
+    while(node!=null&&!node.data.equals(data))
     {   
         index++;
         node = node.next;
     }
+    System.out.println(index);
+    if(index==size)
+    System.out.println("Node does not exist");
+    else
     delete(index);
+}
+
+public void deleteList()
+{
+    head= null;
+    tail=null;
+    size = 0;
 }
 
 }
