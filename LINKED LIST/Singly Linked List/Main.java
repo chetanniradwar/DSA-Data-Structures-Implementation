@@ -19,10 +19,10 @@ public class Main {
       // l.delete(0);
       l.display();
         System.out.println();
-      l.delete(1);
+      l.delete("C");
       l.display();
         System.out.println();
-      l.delete(0);
+      l.delete("B");
       l.display();
         System.out.println();
 

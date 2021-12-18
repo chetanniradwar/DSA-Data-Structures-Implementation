@@ -124,8 +124,17 @@ public void delete( int index)
     }
     size--;
 }
+public void delete(String data)
 {
-
+    Node node = head;
+    // Node prev= null;
+    int index=0;
+    while(node.data.equals(data))
+    {   
+        index++;
+        node = node.next;
+    }
+    delete(index);
 }
 
 }
