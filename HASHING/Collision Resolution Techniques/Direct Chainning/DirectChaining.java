@@ -66,6 +66,33 @@ LinkedList<String> hashTable[];
            System.out.println(i +" -> " + hashTable[i]);
        }
    }
+
+   public void delete(String key)
+   {
+       if(hashTable == null)
+       {
+           System.out.println("Hashtable does not exist");
+           return;
+       }
+       int index = hashFunction(key, hashTable.length);
+       if(hashTable[index]==null)
+       {
+        System.out.println("Data does not exist");
+        return;
+       }
+       LinkedList temp = hashTable[index] ;
+       
+       if(temp.remove(key) )
+       {
+            System.out.println("successfully removed");
+            if(temp.isEmpty())
+            {
+                hashTable[index] = null ;
+            }
+       }
+       else
+       System.out.println("Data does not exist");
+   }
    
   
 }
