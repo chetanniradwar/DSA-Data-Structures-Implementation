@@ -32,7 +32,7 @@ public class LinearProbing {
         
 
         int index =hashFunction(key , hashTable.length);
-        for(int i = index ; ; i=(i+1)%hashTable.length)
+        for(int i = index ;; i=(i+1)%hashTable.length)
         {   
             // System.out.println("in a loop");
             if(hashTable[i]==null)
@@ -75,4 +75,23 @@ public class LinearProbing {
            System.out.println(i +" -> " + hashTable[i]);
        }
    }
+
+
+   public void search(String key)
+    {
+        int index =hashFunction(key, hashTable.length);
+        
+        for(int i = index ;hashTable[i]!=null;i= (i+1) %hashTable.length)
+        {
+           
+            if(hashTable[i].equals(key))
+            {
+                System.out.println("This key is present on index :"+ i) ;
+                return;
+            }
+        }
+        System.out.println("not found") ;
+
+        
+    }
 }

@@ -10,7 +10,14 @@ public class Main {
         lp.insert("maple");
          lp.insert("box");
         lp.insert("tac");
+
+
      //    System.out.println(dc.search("atnhce"));
         lp.display();
+
+        lp.search("chetan");
+        lp.search("atnhce");
+         lp.search("buzz");
+        lp.search("tac");
     }
 }
