@@ -15,9 +15,16 @@ public class Main {
      //    System.out.println(dc.search("atnhce"));
         lp.display();
 
-        lp.search("chetan");
-        lp.search("atnhce");
-         lp.search("buzz");
-        lp.search("tac");
+        // lp.search("chetan");
+        // lp.search("atnhce");
+        //  lp.search("buzz");
+        // lp.search("tac");
+
+        lp.delete("tac");
+        lp.delete("chetan");
+        lp.delete("atnhce");
+        lp.delete("chan");
+        lp.display();
+
     }
 }

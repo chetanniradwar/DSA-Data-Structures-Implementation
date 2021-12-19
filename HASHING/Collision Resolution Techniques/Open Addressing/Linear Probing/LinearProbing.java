@@ -1,3 +1,5 @@
+
+
 public class LinearProbing {
     String hashTable[] ;
     int filledcells;
@@ -81,10 +83,11 @@ public class LinearProbing {
     {
         int index =hashFunction(key, hashTable.length);
         
-        for(int i = index ;hashTable[i]!=null;i= (i+1) %hashTable.length)
+        for(int i = index ;i<index+hashTable.length;i++ )
         {
            
-            if(hashTable[i].equals(key))
+            int newindex = i% hashTable.length;
+            if(hashTable[newindex].equals(key))
             {
                 System.out.println("This key is present on index :"+ i) ;
                 return;
@@ -93,5 +96,23 @@ public class LinearProbing {
         System.out.println("not found") ;
 
         
+    }
+
+    public void delete(String key)
+    {
+        int index =hashFunction(key, hashTable.length);
+        
+        for(int i = index ;i<index+hashTable.length;i++ )
+        {
+            int newindex = i% hashTable.length;
+            if(hashTable[newindex] != null && hashTable[newindex].equals(key))
+            {
+                System.out.println("This key is present on index :"+ i) ;
+                hashTable[newindex] = null;
+                System.out.println("Successfully deleted") ;
+                return;
+            }
+        }
+        System.out.println("The key is not present in Hashtable") ;
     }
 }
