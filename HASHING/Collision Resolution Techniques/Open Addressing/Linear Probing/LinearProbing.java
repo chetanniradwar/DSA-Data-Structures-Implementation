@@ -87,7 +87,7 @@ public class LinearProbing {
         {
            
             int newindex = i% hashTable.length;
-            if(hashTable[newindex].equals(key))
+            if(hashTable[newindex] != null && hashTable[newindex].equals(key))
             {
                 System.out.println("This key is present on index :"+ i) ;
                 return;
