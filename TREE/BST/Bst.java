@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 
 public class Bst
 {  
@@ -60,6 +63,26 @@ public class Bst
     postOrdertraverse(node.left);
     postOrdertraverse(node.right);
     System.out.print(node.data +" -> ");
+   }
+   public void levelOrder(Node node)
+   {       
+       Queue <Node> q = new LinkedList<Node>();
+        if(node==null)
+    {
+        System.out.println("BST does not exist");
+        return;
+    }
+        q.add(node);
+        while(!q.isEmpty())
+        {
+           Node temp= q.remove();
+           System.out.print(temp.data+"->");
+           if(temp.left!=null)
+           q.add(temp.left);
+           if(temp.right!= null)
+           q.add(temp.right);
+
+        }
    }
    public void delete()
    {

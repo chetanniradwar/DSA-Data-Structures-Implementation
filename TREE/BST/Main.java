@@ -22,6 +22,8 @@ public class Main
         bst.postOrdertraverse(root);
         System.out.println();
         bst.inOrdertraverse(root);
+        System.out.println();
+        bst.levelOrder(root);
 
     }
 }
