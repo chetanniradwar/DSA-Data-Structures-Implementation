@@ -26,7 +26,7 @@ public class Bst
        }
        else if(data > node.data)
        {
-           insert (node.right , data);
+           insert(node.right ,data);
        }
        else if(data < node.data)
        {
@@ -35,14 +35,36 @@ public class Bst
 
    }    
    
-//    public void traverse()
-//    {
+   public void inOrdertraverse(Node node)
+   {
+    if(node==null)
+    return;      
+    inOrdertraverse(node.left);
+    System.out.print(node.data +" -> ");
+    inOrdertraverse(node.right);
+   }
+   public void preOrdertraverse(Node node)
+   {
+    if(node==null)
+    return;        
+    System.out.print(node.data +" -> ");
+    preOrdertraverse(node.left);
+            preOrdertraverse(node.right);
 
-//    }
-//    public void delete()
-//    {
 
-//    }
+   }
+   public void postOrdertraverse(Node node)
+   {
+         if(node==null)
+    return;      
+    postOrdertraverse(node.left);
+    postOrdertraverse(node.right);
+    System.out.print(node.data +" -> ");
+   }
+   public void delete()
+   {
+
+   }
    public boolean search(Node node ,int target)
    {
        while(node!=null)
