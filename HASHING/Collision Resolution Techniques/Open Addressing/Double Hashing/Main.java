@@ -7,7 +7,7 @@ public class Main {
         // dh.insert("fox");
         // dh.insert("over");
         // dh.insert("lazy");
-         dh.insert("cat");
+        dh.insert("cat");
         dh.insert("tac");
         dh.insert("act");
         dh.insert("atc");
@@ -16,19 +16,19 @@ public class Main {
 
         // dh.delete("sfd");
 
-
-     //    System.out.println(dc.search("atnhce"));
-         dh.display();
+        // System.out.println(dc.search("atnhce"));
+        dh.display();
 
         // dh.search("chetan");
-        // dh.search("atnhce");
-        //  dh.search("buzz");
-        // dh.search("tac");
+        // // dh.search("atnhce");
+        // dh.search("buzz");
+        dh.search("cta");
 
-        // dh.delete("tac");
+        dh.delete("cta");
         // dh.delete("chetan");
         // dh.delete("atnhce");
-    //  dh.delete("atc");
-        
+        // dh.delete("atc");
+        dh.search("cta");
+
     }
 }
