@@ -1,5 +1,6 @@
 public class Main 
 {    public static void main(String[] args) {
+       
         Bst bst = new Bst();
         Node root =    bst.createBST(70);
         bst.insert( root, 50);
@@ -17,13 +18,32 @@ public class Main
         // System.out.println(bst.search(root,14));
         // System.out.println( bst.search(root ,5));
 
-        bst.preOrdertraverse(root);
-        System.out.println( );
-        bst.postOrdertraverse(root);
-        System.out.println();
-        bst.inOrdertraverse(root);
-        System.out.println();
+        // bst.preOrdertraverse(root);
+        // System.out.println( );
+        // bst.postOrdertraverse(root);
+        // System.out.println();
+        // bst.inOrdertraverse(root);
+        // System.out.println();
+        // bst.levelOrder(root);
+
+
+        // bst.deleteBST(root);
+        // System.out.println(bst.search(root,70));
+        // root=null;
+
+        // System.out.println(bst.search(root,70));
+        // bst.preOrdertraverse(root);
+
+
         bst.levelOrder(root);
+        System.out.println();
+        // bst.delete(root, 40);
+        bst.delete(root, 50);
+        bst.levelOrder(root);
+        
+
+
+
 
     }
 }

@@ -16,10 +16,10 @@ public class Bst {
     public void insert(Node node, int data) {
         Node newNode = new Node(data);
 
-        if (node.left == null) {
+        if (node.left == null && newNode.data < node.data  ) {
             node.left = newNode;
 
-        } else if (node.right == null) {
+        } else if (node.right == null && newNode.data > node.data) {
             node.right = newNode;
         } else if (data > node.data) {
             insert(node.right, data);
@@ -27,6 +27,82 @@ public class Bst {
             insert(node.left, data);
         }
 
+    }
+    public void delete(Node node ,int target)
+    {
+        Node parentNode =null;
+        Node targetNode ;
+        while(node.data != target)
+        {
+            if(target<node.data)
+            {   parentNode = node;
+                node = node.left;
+            }
+            if(target>node.data)
+            {
+                parentNode = node;
+                node = node.right;
+            }
+        }
+        targetNode = node;
+        if(targetNode.left == null && targetNode.right == null)
+        {
+            if(parentNode.right==targetNode)
+            {
+                parentNode.right = null;
+            }
+            else if(parentNode.left ==targetNode)
+            {
+                parentNode.left = null;
+            }
+        }
+        else if(targetNode.right==null || targetNode.left == null)
+        {
+            Node childNode =null;
+            if(targetNode.left!= null)
+            childNode = targetNode.left;
+            else if(targetNode.right !=null)
+            {
+                childNode = targetNode.right;
+            }
+            if(parentNode.left == targetNode)
+            {
+                parentNode.left = childNode;
+            }
+            else if(parentNode.right==targetNode)
+            {
+                parentNode.right = childNode;
+            }
+
+        }
+        else
+        {      
+         Node smallestparent ;
+         smallestparent = findSmallestNode(targetNode.right);
+         if(smallestparent==null)
+         {
+            Node temp=     targetNode.right;
+            targetNode.data = temp.data;
+                targetNode.right= temp.right;
+         }
+         else
+         {
+            targetNode.data =smallestparent.left.data;
+            smallestparent.left =null;
+         }  
+
+        }
+    }
+    
+
+    private Node findSmallestNode(Node node)
+    {   Node parent = null;
+        while(node.left!=null)
+        {
+               parent = node ;
+               node = node.left;
+        }
+        return parent;
     }
 
     public boolean search(Node node, int target) {
