@@ -1,5 +1,7 @@
 import java.util.Set;
 
+import javax.lang.model.util.ElementScanner14;
+
 public class Trie {
 
     Node root;
@@ -68,9 +70,29 @@ public class Trie {
 
     }
 
-    public void search() {
-
+    public boolean search(String target) {
+        Node parent = root;
+        for(int i = 0 ; i<target.length();i++)
+        {   Character c = target.charAt(i);
+           
+            Node child = parent.map.get(c);
+            if(child==null)
+            {
+                return false;
+            }
+            else
+            {
+                parent = child;
+            }   
+        }
+        if(parent.EndOfString)
+        {
+                return true;
+        }
+        return false;
     }
+
+    
 
     // public void printAll()
     // {
