@@ -30,4 +30,22 @@ public class Heap {
         else
         return arr[1] ;
     }
+
+
+    public void levelOrder()
+    {   if(isEmpty())
+        {
+            System.out.println("Heap is empty");
+            return;
+        }
+        
+        for(int i = 1; i< treeSize ; i++)
+        {
+                    System.out.print(arr[i] +" -> ") ;
+
+        }
+        System.out.println();
+    }
+
+    
 }
