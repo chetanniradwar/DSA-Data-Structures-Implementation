@@ -89,5 +89,62 @@ public class Heap {
         heapify(index);
     }
 
+public void extract()
+{
+    arr[1] = arr[treeSize];
+    arr[treeSize]= 0;
+    treeSize--;
+    heapifyTB(1);
+
+}
+
+public void heapifyTB(int index)
+{   int parent = index;
+    int child ;
+    if(heapType.equals("min"))
+    {
+        if(index*2+1 <=treeSize && arr[index*2+1]<arr[index*2])
+        child = index*2+1;
+        else
+        child= index*2;
+
+        if(arr[child]<arr[parent])
+        {
+            int temp;
+            temp =arr[child] ;
+            arr[child]= arr[parent] ;
+            arr[parent] =temp;
+            parent = child;
+            if(2*parent<=treeSize || 2*parent+1 <=treeSize)
+            heapifyTB(parent);
+        }
+    }
+    if(heapType.equals("max"))
+    {     if(index*2+1 <=treeSize && arr[index*2+1]>arr[index*2])
+            child = index*2+1;
+            else
+        child= index*2;
+
+        if(arr[child]>arr[parent])
+        {
+            int temp;
+            temp =arr[child] ;
+            arr[child]= arr[parent] ;
+            arr[parent] =temp;
+            parent = child;
+            if(2*parent<=treeSize || 2*parent+1 <=treeSize)
+            heapifyTB(parent);
+        }
+    }
+    
+
+}
+
+    public void deleteTree()
+    {
+        arr = null;
+        treeSize = 0;
+    }
+
 
 }

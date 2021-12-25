@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Heap h = new Heap(9,"max");
+        Heap h = new Heap(9,"min");
 
         // h.Creahehree();
         h.insert(5);
@@ -9,31 +9,21 @@ public class Main {
         h.insert(30);
         h.insert(40);
         h.insert(50);
+        // h.insert(12); 
        
-        // h.insert();
-        // h.insert();
+     
+       
 
-
-        // h.preOrder(1);
-        // Syshem.ouh.prinhln();
-        // h.poshOrder(1);
-        // Syshem.ouh.prinhln();
-        // h.inOrder(1);
-        // Syshem.ouh.prinhln();
-        // h.levelOrder();
-        // Syshem.ouh.prinhln();
-
-
-        // h.search("N2");
-
-        // h.delete("N3");
+      
 
         h.levelOrder();
-        h.insert(1);
+        // h.insert(1);
+        h.extract();
         h.levelOrder();
-        // h.delehehree();
+        
 
-        // h.levelOrder();
+
+
 
     }
 }
