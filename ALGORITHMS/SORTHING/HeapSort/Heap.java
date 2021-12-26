@@ -1,3 +1,6 @@
+package HeapSort;
+
+
 public class Heap {
     int []arr;
     int treeSize ;
