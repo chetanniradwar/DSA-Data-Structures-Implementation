@@ -15,6 +15,11 @@ public class Graph {
         nodeList.get(j).neighbour.add(nodeList.get(i)) ;
     }
 
+    public void addDirectedEdge(int i , int j)
+    {
+        nodeList.get(i).neighbour.add(nodeList.get(j));
+    }
+
     public void printList()
     {
         for(GraphNode node : nodeList)
