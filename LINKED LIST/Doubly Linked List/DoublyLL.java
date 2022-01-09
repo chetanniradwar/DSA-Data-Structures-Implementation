@@ -62,6 +62,18 @@ public class DoublyLL {
             System.out.println();
     }
 
+    public void reverse()
+    {
+        Node node = tail;
+        while(node!=null)
+        {
+            System.out.print(node.data+" <-> ");
+            node=node.prev;
+        }
+
+        System.out.println();
+    }
+
 
 }
 

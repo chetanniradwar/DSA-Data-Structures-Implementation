@@ -16,6 +16,8 @@ public class Main {
         l.display();
         l.insert(555,1);
         l.display();
+        
 
+        l.reverse();
     }
 }
