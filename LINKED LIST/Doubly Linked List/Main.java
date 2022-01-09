@@ -19,5 +19,9 @@ public class Main {
         
 
         l.reverse();
+
+        System.out.println(l.search(555));
+        
+        System.out.println( l.search(666));
     }
 }

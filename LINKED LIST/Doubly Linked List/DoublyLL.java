@@ -74,6 +74,18 @@ public class DoublyLL {
         System.out.println();
     }
 
+    public  boolean search(int data)
+    {
+        Node node =head;
+        while(node!=null)
+        {
+            if(node.data == data)
+            return true;
+            node = node.next;
+        }
+        return false;
+    }
+
 
 }
 
