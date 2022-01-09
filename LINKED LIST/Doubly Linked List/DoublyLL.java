@@ -110,5 +110,54 @@ public void deleteLL()
     tail=null;
 }
 
+public void  deleteNode(int x)
+{
+// Your code here	\\\
+
+Node node= head;
+
+if(x==0)
+{
+    if(size ==1)
+    {
+        head=null;
+    }
+    else
+    {
+        head=head.next;
+        head.prev =null;
+    }
+}
+else if(x==size-1)
+{
+    
+    while(node.next!=null)
+    {
+        node=node.next;
+    }
+    node.prev.next=null;
+    node.prev=null;
+}
+
+else
+{
+    for(int i =0 ;i<x;i++)
+    {
+        node=node.next;
+    }
+    
+    node.prev.next=node.next;
+   
+    node.next.prev=node.prev;
+     node.prev=null;
+    
+}
+
+
+
+}
+
+
+
 }
 

@@ -24,8 +24,8 @@ public class Main {
         
         System.out.println( l.search(666));
 
-        l.deleteLL();
-
+        // l.deleteLL();
+        l.deleteNode(5);
         l.display();
     }
 }
