@@ -51,9 +51,22 @@ public class DoublyLL {
 
 
     }
-
+    public boolean isEmpty()
+    {
+        if(head==null&&tail==null)
+        {
+                System.out.println("LL is empty");
+            return true;
+        }
+        else 
+        return false;
+    }
     public void display()
-    {         Node node =head;
+    {   
+        if(isEmpty())
+        return;
+        
+        Node node =head;
             while(node!=null)
             {
                 System.out.print(node.data+" <-> ");
@@ -85,7 +98,17 @@ public class DoublyLL {
         }
         return false;
     }
-
+public void deleteLL()
+{   
+    Node node = head;
+    while(node!=null)
+    {
+        node.prev=null;
+        node=node.next;
+    }
+    head=null;
+    tail=null;
+}
 
 }
 
